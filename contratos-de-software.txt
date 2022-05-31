@@ -1,0 +1,133 @@
+CREAR UN USUARIO
+POST: usuario/
+
+REQUEST:  
+{
+	"id": 1,
+	"nombre": "Juanito Garcia",
+	"lenguaje": "C",
+	"correo_Electronico": "juanito@ueb.com"
+}
+
+RESPONSE:
+{
+	"id": 1,
+	"nombre": "Juanito Garcia",
+	"lenguaje": "C",
+	"correo_Electronico": "juanito@ueb.com",
+	"fecha_de_creacion": "27-05-2022 23:34:00",
+	"fecha_de_actualizacion" : "27-05-2022 23:34:00"
+}, 200
+
+Se puede tener los diferentes códigos:
+- 200 si fue creado exitosamente
+- 400 usuario No creado
+
+OBTENER TODOS LOS USUARIOS
+GET: /usuario/
+
+REQUEST:  
+{
+}
+
+RESPONSE:
+usuarios: {
+	"id": 1,
+	"nombre": "Juanito Garcia",
+	"lenguaje": "C",
+	"correo_Electronico": "juanito@ueb.com",
+	"fecha_de_creacion": "27-05-2022 23:34:00",
+	"fecha_de_actualizacion" : "27-05-2022 23:34:00"
+},
+{
+	"id": 2,
+	"nombre": "Camilo Herrera",
+	"lenguaje": "Java",
+	"correo_Electronico": "jcamilo@ueb.com",
+	"fecha_de_creacion": "29-07-2022 24:34:00",
+	"fecha_de_actualizacion" : "29-07-2022 24:34:00"
+}, 200
+
+Códigos de respuesta:
+- 200 : Exitoso, trae todos los usuarios
+
+OBTENER USUARIO POR NOMBRE
+GET: /usuario/{nombre}
+
+REQUEST:  
+{
+}
+RESPONSE:
+usuarios: {
+	"id": 1,
+	"nombre": "Juanito Garcia",
+	"lenguaje": "C",
+	"correo_Electronico": "juanito@ueb.com",
+	"fecha_de_creacion": "27-05-2022 23:34:00",
+	"fecha_de_actualizacion" : "27-05-2022 23:34:00"
+}
+
+OBTENER USUARIO POR CORREO
+GET: /usuario/{correo}
+
+REQUEST:  
+{
+}
+RESPONSE:
+usuarios: {
+	"id": 1,
+	"nombre": "Juanito Garcia",
+	"lenguaje": "C",
+	"correo_Electronico": "juanito@ueb.com",
+	"fecha_de_creacion": "27-05-2022 23:34:00",
+	"fecha_de_actualizacion" : "27-05-2022 23:34:00"
+}
+
+ELIMINAR USUARIO POR CORREO
+DELETE: /usuario/{correo}
+REQUEST:  
+{
+}
+RESPONSE:
+{
+	Usuario eliminado exitosamente
+},200
+
+EDITAR USUARIO POR CORREO
+PUT: /usuario/{correo}
+REQUEST:  
+{
+	"nombre": "Kevin Garcia",
+	"lenguaje": "C++",
+	"correo_Electronico": "KvinGarcia@ueb.com"
+}
+RESPONSE:
+usuarios: {
+	"id" : 1,
+	"nombre": "Kevin Garcia",
+	"lenguaje": "C++",
+	"correo_Electronico": "KvinGarcia@ueb.com",
+	"fecha_de_creacion": "27-05-2022 23:34:00",
+	"fecha_de_actualizacion" : "31-05-2022 00:18:00"
+}
+
+CREACIÓN EQUIPOS
+POST: /inscripcion/
+REQUEST:  
+{
+	"nombre_de_equipo": "EQUIPO NAME",
+	"capitan_correo": "KvinGarcia@ueb.com",
+	"correo_participante_uno": "KvinGarcia@ueb.com",
+	"correo_participante_dos": "jcamilo@ueb.com",
+	"correo_participante_tres": null
+}
+RESPONSE:
+{
+	200, equipo creado exitosamente
+}
+
+Códigos de respuesta:
+- 200 : Exitoso, equipo creado exitosamente,
+- 400 : Nombre de equipo ya existente,
+- 400 : Un participante ya tiene grupo,
+- 400 : Equipo sin participantes
