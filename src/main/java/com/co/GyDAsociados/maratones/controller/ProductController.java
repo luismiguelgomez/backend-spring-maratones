@@ -1,4 +1,4 @@
-package com.co.GyDAsociados.maratones.maratones.controller;
+package com.co.GyDAsociados.maratones.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

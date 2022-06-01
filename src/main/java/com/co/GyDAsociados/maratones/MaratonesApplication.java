@@ -1,4 +1,4 @@
-package com.co.GyDAsociados.maratones.maratones;
+package com.co.GyDAsociados.maratones;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
