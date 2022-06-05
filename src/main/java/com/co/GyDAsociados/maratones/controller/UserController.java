@@ -1,6 +1,7 @@
 package com.co.GyDAsociados.maratones.controller;
 
 import com.co.GyDAsociados.maratones.models.User;
+import com.co.GyDAsociados.maratones.service.CsvExportService;
 import com.co.GyDAsociados.maratones.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,6 +11,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -17,6 +20,9 @@ import java.util.List;
 public class UserController {
     @Autowired
     UserService userService;
+
+    @Autowired
+    CsvExportService csvExportService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ResponseEntity<List<User>> getAllUsers() {
@@ -39,6 +45,13 @@ public class UserController {
     void delete(@PathVariable long id) {
         // TODO: eliminar en la base de datos al usuario
         userService.delete(id);
+    }
+
+    @RequestMapping(value = "/generador-csv", method = RequestMethod.GET)
+    public void getAllUsuariosInCsv(HttpServletResponse servletResponse) throws IOException {
+        servletResponse.setContentType("text/csv");
+        servletResponse.addHeader("Content-Disposition","attachment; filename=\"usuarios.csv\"");
+        csvExportService.writeEmployeesToCsv(servletResponse.getWriter());
     }
 
 }

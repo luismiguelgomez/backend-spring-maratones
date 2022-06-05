@@ -26,6 +26,13 @@ public class UserDaoImp implements UserDao {
 
     @Override
     @Transactional
+    public List<User> getUsersInOrder() {
+        String hqlObtenerTodosUsuariosPorOrdenCreacion = "FROM User as u ORDER BY u.fechaCreacion DESC";
+        return (List<User>) entityManager.createQuery(hqlObtenerTodosUsuariosPorOrdenCreacion).getResultList();
+    }
+
+    @Override
+    @Transactional
     public User register(@RequestBody User user) {
         entityManager.merge(user);
         return user;

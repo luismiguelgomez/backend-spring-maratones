@@ -31,4 +31,10 @@ public interface UserDao {
      * @param id id utilizado para eliminar un usuario
      */
     void delete(@PathVariable long id) ;
+
+    /**
+     * Lista de usuario de manera ascendente
+     * @return Lista de usuarios de orden ascendente
+     */
+    List<User> getUsersInOrder();
 }

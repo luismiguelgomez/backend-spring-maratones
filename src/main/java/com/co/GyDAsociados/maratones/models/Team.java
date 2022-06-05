@@ -21,7 +21,7 @@ public class Team {
     private Long userId;
 
     @Column(name = "team_name", unique=true, length=100, nullable = false)
-    private String email;
+    private String teamName;
 
     @Column(name = "team_password", unique=true, length=20, nullable = false)
     private String teamPassword;
@@ -33,9 +33,9 @@ public class Team {
 
     public Team() {}
 
-    public Team(Long userId, String email, String teamPassword) {
+    public Team(Long userId, String teamName, String teamPassword) {
         this.userId = userId;
-        this.email = email;
+        this.teamName = teamName;
         this.teamPassword = teamPassword;
     }
 }
