@@ -30,4 +30,18 @@ public class UserDaoImp implements UserDao {
         return user;
     }
 
+    @Override
+    @Transactional
+    public User get(long id) {
+        return entityManager.find(User.class, id);
+    }
+
+    @Override
+    @Transactional
+    public void delete(long id) {
+        User usuarioEliminar = get(id);
+        entityManager.remove(usuarioEliminar);
+    }
+
+
 }
