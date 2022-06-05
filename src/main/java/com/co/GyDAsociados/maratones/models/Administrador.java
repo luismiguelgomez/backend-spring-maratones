@@ -8,22 +8,26 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+
 @Entity
-@Table(name = "role")
+@Table(name = "administrador")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(value={"hibernateLazyInitializer","handler","fieldHandler"})
-public class Role {
+public class Administrador {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column(name = "role_id", nullable = false)
-    private Long roleId;
+    @Column(name = "admin_id", nullable = false)
+    private Long adminId;
 
-    @Column(name = "type", nullable = false)
-    private Long type;
+    @Column(name = "email", unique=true, length=100, nullable = false)
+    private String email;
 
-    @Column(name = "name", unique=true, length=20, nullable = false)
+    @Column(name = "name", unique=true, length=100, nullable = false)
     private String name;
+
+    @Column(name = "admin_password", unique=true, length=20, nullable = false)
+    private String adminPassword;
 }

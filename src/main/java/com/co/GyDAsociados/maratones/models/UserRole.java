@@ -9,21 +9,23 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "role")
+@Table(name = "user_role")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(value={"hibernateLazyInitializer","handler","fieldHandler"})
-public class Role {
+public class UserRole {
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column(name = "role_id", nullable = false)
-    private Long roleId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_role_id", nullable = false)
+    private Long userRoleId;
 
-    @Column(name = "type", nullable = false)
-    private Long type;
+    @ManyToOne
+    @JoinColumn(name = "role_id", nullable = false)
+    private Role role;
 
-    @Column(name = "name", unique=true, length=20, nullable = false)
-    private String name;
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 }
