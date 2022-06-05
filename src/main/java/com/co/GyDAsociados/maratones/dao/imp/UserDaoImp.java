@@ -18,6 +18,7 @@ public class UserDaoImp implements UserDao {
     EntityManager entityManager;
 
     @Override
+    @Transactional
     public List<User> getAllUsers() {
         String hqlObtenerTodosUsuarios = "FROM User as u";
         return (List<User>) entityManager.createQuery(hqlObtenerTodosUsuarios).getResultList();
