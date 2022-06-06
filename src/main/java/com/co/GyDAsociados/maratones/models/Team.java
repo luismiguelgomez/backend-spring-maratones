@@ -18,7 +18,7 @@ public class Team {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "team_id", nullable = false)
-    private Long userId;
+    private Long teamId;
 
     @Column(name = "team_name", unique=true, length=100, nullable = false)
     private String teamName;
@@ -28,13 +28,13 @@ public class Team {
 
     public Team(Long userId) {
         super();
-        this.userId = userId;
+        this.teamId = userId;
     }
 
     public Team() {}
 
     public Team(Long userId, String teamName, String teamPassword) {
-        this.userId = userId;
+        this.teamId = userId;
         this.teamName = teamName;
         this.teamPassword = teamPassword;
     }
