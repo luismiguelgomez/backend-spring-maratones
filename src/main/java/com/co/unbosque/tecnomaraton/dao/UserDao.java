@@ -1,6 +1,6 @@
-package com.co.GyDAsociados.maratones.dao;
+package com.co.unbosque.tecnomaraton.dao;
 
-import com.co.GyDAsociados.maratones.models.User;
+import com.co.unbosque.tecnomaraton.models.User;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 

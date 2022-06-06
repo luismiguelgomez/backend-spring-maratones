@@ -1,7 +1,7 @@
-package com.co.GyDAsociados.maratones.service;
+package com.co.unbosque.tecnomaraton.service;
 
-import com.co.GyDAsociados.maratones.dao.UserDao;
-import com.co.GyDAsociados.maratones.models.User;
+import com.co.unbosque.tecnomaraton.dao.UserDao;
+import com.co.unbosque.tecnomaraton.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;

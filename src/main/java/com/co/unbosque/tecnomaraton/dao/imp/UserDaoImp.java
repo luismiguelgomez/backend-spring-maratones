@@ -1,7 +1,7 @@
-package com.co.GyDAsociados.maratones.dao.imp;
+package com.co.unbosque.tecnomaraton.dao.imp;
 
-import com.co.GyDAsociados.maratones.dao.UserDao;
-import com.co.GyDAsociados.maratones.models.User;
+import com.co.unbosque.tecnomaraton.dao.UserDao;
+import com.co.unbosque.tecnomaraton.models.User;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestBody;

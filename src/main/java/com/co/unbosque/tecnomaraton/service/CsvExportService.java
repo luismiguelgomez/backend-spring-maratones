@@ -1,8 +1,7 @@
-package com.co.GyDAsociados.maratones.service;
+package com.co.unbosque.tecnomaraton.service;
 
-import com.co.GyDAsociados.maratones.dao.UserDao;
-import com.co.GyDAsociados.maratones.models.Team;
-import com.co.GyDAsociados.maratones.models.User;
+import com.co.unbosque.tecnomaraton.dao.UserDao;
+import com.co.unbosque.tecnomaraton.models.User;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.co.GyDAsociados.maratones.models;
+package com.co.unbosque.tecnomaraton.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;

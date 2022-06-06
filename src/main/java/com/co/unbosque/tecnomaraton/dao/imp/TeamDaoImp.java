@@ -1,7 +1,7 @@
-package com.co.GyDAsociados.maratones.dao.imp;
+package com.co.unbosque.tecnomaraton.dao.imp;
 
-import com.co.GyDAsociados.maratones.dao.TeamDao;
-import com.co.GyDAsociados.maratones.models.Team;
+import com.co.unbosque.tecnomaraton.dao.TeamDao;
+import com.co.unbosque.tecnomaraton.models.Team;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 

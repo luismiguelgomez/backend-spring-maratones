@@ -1,7 +1,7 @@
-package com.co.GyDAsociados.maratones.controller;
+package com.co.unbosque.tecnomaraton.controller;
 
-import com.co.GyDAsociados.maratones.models.Team;
-import com.co.GyDAsociados.maratones.service.TeamService;
+import com.co.unbosque.tecnomaraton.models.Team;
+import com.co.unbosque.tecnomaraton.service.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
