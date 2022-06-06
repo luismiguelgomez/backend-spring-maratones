@@ -26,9 +26,9 @@ public class Team {
     @Column(name = "team_password", unique=true, length=20, nullable = false)
     private String teamPassword;
 
-    public Team(Long userId) {
+    public Team(Long teamId) {
         super();
-        this.teamId = userId;
+        this.teamId = teamId;
     }
 
     public Team() {}
